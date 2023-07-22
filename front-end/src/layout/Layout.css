@@ -1,0 +1,27 @@
+*{
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.side-bar {
+  background-color: rgb(121, 110, 151);
+  min-width: 200px;
+  flex-wrap: wrap;
+  
+  
+}
+
+
+
+
+
+/* -------  Media Query ------- */
+
+/*for desktop*/
+
+@media all and (min-width: 750px){
+
+.side-bar { 
+  height: 110vh;
+  
+}
+}
