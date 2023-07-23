@@ -2,6 +2,8 @@
  * 
  * Path: back-end\src\reservations\reservations.service.js
  * 
+ * This file defines the service functions for the reservations resource.
+ * 
 */
 
 const knex = require("../db/connection");

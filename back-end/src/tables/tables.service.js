@@ -1,4 +1,9 @@
-/** @format */
+/** @format 
+ * 
+ * Path: back-end\src\tables\tables.service.js
+ * 
+ * This file defines the service functions for the tables resource.
+*/
 
 const knex = require("../db/connection");
 
