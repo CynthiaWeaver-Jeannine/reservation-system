@@ -1,10 +1,21 @@
-/** @format */
+/** @format 
+ * 
+ * Path: front-end\src\reservations\ReservationsList.js
+*/
 
 import React from "react";
 
 //import components
 import ReservationCancel from "./ReservationCancel";
 
+/**
+ * Defines the reservations list.
+ * @param reservations
+ * the reservations to be displayed in the list
+ * @param date	
+ * the date to be displayed in the list
+ * @returns {JSX.Element}
+ */
 const ReservationsList = ({ reservations, date }) => {
 	const tableRows = reservations.map((reservation) => (
 		<tr key={reservation.reservation_id}>

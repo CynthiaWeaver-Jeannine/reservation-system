@@ -1,4 +1,7 @@
-/** @format */
+/** @format
+ * 
+ * Path: front-end\src\reservations\ReservationCancel.js
+ */
 
 import React, { useState } from "react";
 
@@ -7,6 +10,13 @@ import ErrorAlert from "../layout/ErrorAlert";
 
 //import utility functions
 import { cancelReservation } from "../utils/api.js";
+
+/**
+ * Defines the reservation cancel button.
+ * @param reservation_id
+ * the reservation to be cancelled
+ * @returns {JSX.Element}
+ */
 
 const ReservationCancel = ({ reservation_id }) => {
 	const [error, setError] = useState(null);

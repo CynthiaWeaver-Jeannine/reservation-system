@@ -1,4 +1,7 @@
-/** @format */
+/** @format 
+ * 
+ * Path: front-end\src\reservations\ReservationSearch.js
+*/
 
 import React, { useState } from "react";
 
@@ -8,6 +11,11 @@ import { searchReservations } from "../utils/api";
 //import components
 import ErrorAlert from "../layout/ErrorAlert";
 import ReservationsList from "./ReservationsList";
+
+/**
+ * Defines the reservation search page.
+ * @returns {JSX.Element}
+ */
 
 const ReservationSearch = () => {
 	const [inputData, setInputData] = useState("");

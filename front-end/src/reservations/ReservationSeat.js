@@ -1,4 +1,7 @@
-/** @format */
+/** @format 
+ * 	
+ * Path: front-end\src\reservations\ReservationSeat.js
+*/
 
 import React, { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router";
@@ -8,6 +11,11 @@ import ErrorAlert from "../layout/ErrorAlert";
 
 //import utility functions
 import { listTables, seatReservation } from "../utils/api";
+
+/**
+ * Defines the reservation seat page.
+ * @returns {JSX.Element}
+ */
 
 const ReservationSeat = () => {
 	const { reservation_id } = useParams();

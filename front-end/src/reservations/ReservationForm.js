@@ -1,7 +1,21 @@
-/** @format */
+/** @format 
+ * 
+ * Path: front-end\src\reservations\ReservationForm.js
+*/
 
 import React from "react";
 
+/**
+ * Defines the reservation form.
+ * @param reservation
+ * the reservation to be displayed in the form
+ * @param submitHandler
+ * the function to call when the form is submitted
+ * @param changeHandler 	
+ * the function to call when the form is changed
+ * @param cancelHandler
+ * the function to call when the form is cancelled
+ */
 const ReservationForm = ({
 	reservation,
 	submitHandler,

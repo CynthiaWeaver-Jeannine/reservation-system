@@ -1,4 +1,7 @@
-/** @format */
+/** @format
+ * 
+ * Path: front-end\src\reservations\ReservationCreate.js
+ */
 
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
@@ -11,6 +14,11 @@ import { formatAsDate } from "../utils/date-time";
 import ErrorAlert from "../layout/ErrorAlert";
 import ReservationForm from "./ReservationForm";
 
+
+/**
+ * Defines the reservation create page.
+ * @returns {JSX.Element}
+ */
 const ReservationCreate = () => {
 	const history = useHistory();
 
