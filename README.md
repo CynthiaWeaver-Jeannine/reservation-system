@@ -1,6 +1,6 @@
-Fullstack Application - Restaurant Reservation
+# Restaurant Reservation - a FullStack Web Application  
 
-Project Pitch: The aim of this web application is to provide the user with an internal restaurant management site. The functionality of this site allows a user to schedule a new reservation, create a new table to seat guests at, look up past and current reservations by phone number, and keep track of who is seated at what table. This is a fullstack application utilizing React, Bootstrap, Node.js, express, and knex.
+Scenario: The aim of this web application is to provide the user with an internal restaurant management site. The functionality of this site allows a user to schedule a new reservation, create a new table to seat guests at, look up past and current reservations by phone number, and keep track of who is seated at what table. This is a fullstack application utilizing React, Bootstrap, Node.js, express, and knex.
 
 User Stories: As a user, I should be able to:
 * View todays reservations and available tables at the /dashboard route.
@@ -8,7 +8,7 @@ User Stories: As a user, I should be able to:
 * Look up customers and their past reservations at the /search route.
 * Create a new table to seat guests at, at the tables/new route.
 
-Here is a link to the live application!
+Click here for to visit the deployed site: [Restaurant Reservations System](https://restaurant-reservations-system.onrender.com)
 
 
 Dashboard View:
