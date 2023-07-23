@@ -1,5 +1,5 @@
 *{
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .side-bar {
@@ -15,8 +15,6 @@
 
 
 /* -------  Media Query ------- */
-
-/*for desktop*/
 
 @media all and (min-width: 750px){
 
