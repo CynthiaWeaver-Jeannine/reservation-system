@@ -57,7 +57,7 @@ const ReservationSearch = () => {
 		<main>
 			<div className="col form-group">
 				<div className="row d-md-flex my-3">
-					<h2>Find reservation</h2>
+					<h2>Find Reservation</h2>
 
 					<ErrorAlert error={error} />
 				</div>
