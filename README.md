@@ -9,7 +9,7 @@ User Stories: As a user, I should be able to:
 * Create a new table to seat guests at, at the tables/new route.
 
 Here is a link to the live application!
-https://aurorasrestaurantreservationfrontend.onrender.com/dashboard
+
 
 Dashboard View:
 
