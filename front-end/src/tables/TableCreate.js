@@ -1,4 +1,7 @@
-/** @format */
+/** @format 
+ * 
+ * Path: front-end\src\tables\TableCreate.js
+*/
 
 import React, { useState } from "react";
 import { useHistory } from "react-router";
@@ -10,6 +13,10 @@ import ErrorAlert from "../layout/ErrorAlert";
 //import utility functions
 import { createTable } from "../utils/api";
 
+/**
+ * Defines the table create page.
+ * @returns {JSX.Element}
+ */
 const TableCreate = () => {
 	const history = useHistory();
 

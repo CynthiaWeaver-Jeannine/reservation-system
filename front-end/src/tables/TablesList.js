@@ -1,10 +1,22 @@
-/** @format */
+/** @format 
+ * 
+ * Path: front-end\src\tables\TablesList.js
+*/
 
 import React from "react";
 
 //import components
 import TableFinish from "./TableFinish";
 
+
+/**
+ * Defines the tables list.
+ * @param tables
+ * the tables to be displayed in the list
+ * @param clickHandler
+ * the function to call when the button is clicked
+ * @returns {JSX.Element}
+ */
 const TablesList = ({ tables, clickHandler, error }) => {
 	const tableRows = tables.map((table) => (
 		<tr key={table.table_id}>
