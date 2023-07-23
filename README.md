@@ -1,4 +1,5 @@
-# Restaurant Reservation - a FullStack Web Application  
+# Restaurant Reservations System # 
+### FullStack Web Application ###
 
 Scenario: The aim of this web application is to provide the user with an internal restaurant management site. The functionality of this site allows a user to schedule a new reservation, create a new table to seat guests at, look up past and current reservations by phone number, and keep track of who is seated at what table. This is a fullstack application utilizing React, Bootstrap, Node.js, express, and knex.
 
