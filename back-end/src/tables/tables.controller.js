@@ -1,4 +1,7 @@
-/** @format */
+/** @format 
+ * 
+ * Path: back-end\src\tables\tables.controller.js
+*/
 
 //import error components
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
@@ -11,7 +14,6 @@ const reservationsService = require("../reservations/reservations.service");
 //Validation functions
 
 //validate that table exists
-
 async function tableExists(req, res, next) {
 	const table = await service.read(req.params.table_id);
 
@@ -26,7 +28,6 @@ async function tableExists(req, res, next) {
 }
 
 //validate that reservation exists
-
 async function reservationExists(req, res, next) {
 	const { reservation_id } = req.body.data;
 	const reservation = await reservationsService.read(reservation_id);
@@ -41,8 +42,7 @@ async function reservationExists(req, res, next) {
 	});
 }
 
-//validate that request body has data property
-
+//validate that table has data property
 function hasData(req, res, next) {
 	if (req.body.data) {
 		return next();
@@ -51,7 +51,6 @@ function hasData(req, res, next) {
 }
 
 //validate that request has reservation_id property
-
 function hasReservationId(req, res, next) {
 	const { data } = req.body;
 
@@ -65,12 +64,10 @@ function hasReservationId(req, res, next) {
 }
 
 //validate that body has required properties
-
 const requiredProperties = ["table_name", "capacity"];
 const hasRequiredProperties = hasProperties(requiredProperties);
 
 //validate that table name is at least 2 characters long
-
 function tableNameIsValid(req, res, next) {
 	const tableName = req.body.data.table_name;
 
@@ -84,7 +81,6 @@ function tableNameIsValid(req, res, next) {
 }
 
 //validate that table capacity is at least 1 person and is a number
-
 function validCapacity(req, res, next) {
 	const tableCapacity = req.body.data.capacity;
 
@@ -106,7 +102,6 @@ function validCapacity(req, res, next) {
 }
 
 //validate that table capacity is enough for the number of people
-
 function tableCanFitAllPeople(req, res, next) {
 	const tableCapacity = res.locals.table.capacity;
 	const numberOfPeopleInReservation = res.locals.reservation.people;
@@ -121,7 +116,6 @@ function tableCanFitAllPeople(req, res, next) {
 }
 
 //validate that table is occupied
-
 function tableIsOccupied(req, res, next) {
 	const table = res.locals.table;
 
@@ -136,7 +130,6 @@ function tableIsOccupied(req, res, next) {
 }
 
 //validate that table is not occupied
-
 function tableIsUnoccupied(req, res, next) {
 	const table = res.locals.table;
 
@@ -150,7 +143,6 @@ function tableIsUnoccupied(req, res, next) {
 }
 
 //validate that reservation is not already seated
-
 function isSeated(req, res, next) {
 	const { status } = res.locals.reservation;
 
@@ -163,8 +155,9 @@ function isSeated(req, res, next) {
 	next();
 }
 
-//CRUDL functions
+//CRUDL Functions
 
+//create a new table
 async function create(req, res) {
 	const newTable = await service.create(req.body.data);
 	res.status(201).json({
@@ -172,20 +165,19 @@ async function create(req, res) {
 	});
 }
 
+//read a table
 function read(req, res) {
 	const data = res.locals.table;
 	res.json({ data });
 }
 
-//update table by assinging a reservation id to it and change reservation status to seated
-
+//update a table's reservation_id to match reservation's reservation_id
 async function update(req, res, next) {
 	const updatedTable = {
 		...res.locals.table,
 		table_id: res.locals.table.table_id,
 		reservation_id: res.locals.reservation.reservation_id,
 	};
-
 	const updatedReservation = {
 		...res.locals.reservation,
 		reservation_id: res.locals.reservation.reservation_id,
@@ -199,7 +191,6 @@ async function update(req, res, next) {
 }
 
 //change table's reservation_id to null and reservation's status to finished
-
 async function finish(req, res, next) {
 	const table = await service.read(req.params.table_id);
 
@@ -221,6 +212,7 @@ async function finish(req, res, next) {
 	res.json({ data });
 }
 
+//list all tables
 async function list(req, res) {
 	const data = await service.list();
 

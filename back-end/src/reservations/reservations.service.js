@@ -1,6 +1,11 @@
-/** @format */
+/** @format 
+ * 
+ * Path: back-end\src\reservations\reservations.service.js
+ * 
+*/
 
 const knex = require("../db/connection");
+
 
 function create(newReservation) {
 	return knex("reservations")
