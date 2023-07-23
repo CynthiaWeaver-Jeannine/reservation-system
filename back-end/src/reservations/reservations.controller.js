@@ -1,4 +1,7 @@
-/** @format */
+/** @format 
+ * 
+ * Path: back-end\src\reservations\reservations.controller.js
+*/
 
 //import error components
 const asyncErrorBoundary = require("../errors/asyncErrorBoundary");
@@ -7,10 +10,7 @@ const hasProperties = require("../errors/hasProperties");
 //import service file
 const service = require("./reservations.service");
 
-//Validation functions
-
 //validate that body has data property
-
 function hasData(req, res, next) {
 	if (req.body.data) {
 		return next();
@@ -19,7 +19,6 @@ function hasData(req, res, next) {
 }
 
 //validate that body has all required properties
-
 const requiredProperties = [
 	"first_name",
 	"last_name",
@@ -31,8 +30,7 @@ const requiredProperties = [
 
 const hasRequiredProperties = hasProperties(requiredProperties);
 
-//validate that number of people is not less than 1
-
+//validate that number of people is 1 or more
 function validNumberOfPeople(req, res, next) {
 	const people = Number(req.body.data.people);
 
@@ -45,8 +43,7 @@ function validNumberOfPeople(req, res, next) {
 	next();
 }
 
-//validate that people property is a number
-
+//validate that people is a number
 function peopleIsNumber(req, res, next) {
 	const people = req.body.data.people;
 
@@ -60,7 +57,6 @@ function peopleIsNumber(req, res, next) {
 }
 
 //validate that time is valid format
-
 function validTimeFormat(req, res, next) {
 	const time = req.body.data.reservation_time;
 	const validTime = /[0-9]{2}:[0-9]{2}/;
@@ -75,7 +71,6 @@ function validTimeFormat(req, res, next) {
 }
 
 //validate that date is valid format
-
 function validDateFormat(req, res, next) {
 	const date = req.body.data.reservation_date;
 	const validDate = /\d{4}-\d{2}-\d{2}/;
@@ -89,8 +84,7 @@ function validDateFormat(req, res, next) {
 	next();
 }
 
-//validate reservation's timeframe
-
+//validate that reservation is within time frame
 function reservationTimeFrameValidation(req, res, next) {
 	const { reservation_date, reservation_time } = req.body.data;
 
@@ -136,6 +130,8 @@ function reservationTimeFrameValidation(req, res, next) {
 	}
 	next();
 }
+
+//validate that reservation is not in the past
 function isNotPastDate(req, res, next) {
 	const { reservation_date, reservation_time } = req.body.data;
 	const [hour, minute] = reservation_time.split(":");
@@ -162,7 +158,6 @@ function isNotPastDate(req, res, next) {
 	}
 }
 //validate that reservation exists
-
 async function reservationExists(req, res, next) {
 	const reservation = await service.read(req.params.reservation_id);
 
@@ -176,8 +171,7 @@ async function reservationExists(req, res, next) {
 	});
 }
 
-//validate the status of reservation
-
+//validate that status is valid
 const validStatusValues = ["booked", "seated", "finished", "cancelled"];
 
 function validStatus(req, res, next) {
@@ -189,8 +183,7 @@ function validStatus(req, res, next) {
 	next();
 }
 
-//validate that reservation is not finished (a finished reservation cannot be updated)
-
+//validate that reservation is not finished
 function notFinished(req, res, next) {
 	const { status } = res.locals.reservation;
 
@@ -203,8 +196,7 @@ function notFinished(req, res, next) {
 	next();
 }
 
-//validate that reservation has booked status
-
+//validate that reservation is booked
 function bookedStatus(req, res, next) {
 	const { status } = req.body.data;
 
@@ -217,10 +209,9 @@ function bookedStatus(req, res, next) {
 	next();
 }
 
-//CRUDL functions
+//CRUDL Functions
 
-//create new reservation
-
+//create reservation
 async function create(req, res) {
 	const newReservation = await service.create(req.body.data);
 
@@ -229,14 +220,12 @@ async function create(req, res) {
 	});
 }
 
-// get a single reservation
-
+//read reservation
 function read(req, res) {
 	res.json({ data: res.locals.reservation });
 }
 
 //update reservation
-
 async function update(req, res, next) {
 	const updatedReservation = {
 		...req.body.data,
@@ -248,7 +237,6 @@ async function update(req, res, next) {
 }
 
 //update reservation status
-
 async function updateStatus(req, res, next) {
 	const status = req.body.data.status;
 	const { reservation_id } = res.locals.reservation;
@@ -262,8 +250,7 @@ async function updateStatus(req, res, next) {
 	res.json({ data });
 }
 
-//list reservations for a date, a mobile number
-
+//list reservations
 async function list(req, res) {
 	const { date, mobile_number } = req.query;
 

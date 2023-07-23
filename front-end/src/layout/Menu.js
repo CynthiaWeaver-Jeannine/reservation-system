@@ -5,6 +5,7 @@ import "./Menu.css";
 
 import { Link } from "react-router-dom";
 import "./Layout.css";
+
 /**
  * Defines the menu for this application.
  *
