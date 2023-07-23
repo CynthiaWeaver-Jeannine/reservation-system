@@ -1,32 +1,52 @@
-Fullstack Application - Restaurant Reservation
+# Restaurant Reservations System # 
+### FullStack Web Application ###  
+> React.js, Node.js, PostgreSQL,  Knex
 
-Project Pitch: The aim of this web application is to provide the user with an internal restaurant management site. The functionality of this site allows a user to schedule a new reservation, create a new table to seat guests at, look up past and current reservations by phone number, and keep track of who is seated at what table. This is a fullstack application utilizing React, Bootstrap, Node.js, express, and knex.
+### Scenario  
+> The application is created for a new start-up restaurant, "Periodic Tables".
+> The task is to create a reservation system appropriate for fine dining restaurants.
+> The software users will be restaurant personnel.
+> When a customer calls to request a reservation, the user will create a new reservation.
+<br/>
 
-User Stories: As a user, I should be able to:
-* View todays reservations and available tables at the /dashboard route.
-* Create a new reservation when a guest calls in at the reservations/new route.
-* Look up customers and their past reservations at the /search route.
-* Create a new table to seat guests at, at the tables/new route.
 
-Here is a link to the live application!
-https://aurorasrestaurantreservationfrontend.onrender.com/dashboard
+### User Story Summaries 
+### _As a restaurant manager, I want to be able to do the following:_
+> Create a new reservation when a customer calls.                                                                                                                                 
+> Allow reservations to be created only days with the restaurant is open.                        
+> Allow reservations to be created to accommodate guests during business hours.                                                                                             
+> Seat a customer with an existing reservation at a specific table.  
+> Free an occupied table in the system when the customer leaves.                                                                                                     
+> Apply a status of either booked, seated, or finished to each reservation.                                                                                                    
+> Search for a reservation by phone number (partial or complete).                                                                                                         
+> Edit an existing reservation.
+<br/>
 
-Dashboard View:
+### Click here for to visit the deployed site: _[Restaurant Reservations System](https://restaurant-reservations-system.onrender.com)_
+<br/>
 
-![res home](https://github.com/AuroraHusong/newRestaurantRes/assets/90487267/f8d48845-d401-45fe-8133-e6bd2c91ed10)
+### Dashboard List Reservations, List Tables, and Show Status
 
-Search View:
-  
-![res search](https://github.com/AuroraHusong/newRestaurantRes/assets/90487267/5ab949e4-7e81-410c-956f-1cf327d95014)
+<br/>
 
-New Reservation View:
+### Search By Mobile Number Form
 
-![res create](https://github.com/AuroraHusong/newRestaurantRes/assets/90487267/dbd1df78-b61c-476c-a75d-12dbddb17e09)
+<br/>
 
-New Table View:
+### Create Table Form
 
-![res newTable](https://github.com/AuroraHusong/newRestaurantRes/assets/90487267/42b753af-46a2-45cc-af5a-d87a99748e7d)
+<br/>
 
-Mobile View:
 
-![res mobileView](https://github.com/AuroraHusong/newRestaurantRes/assets/90487267/e51b98ab-3ba8-4cb3-92d5-610bd50f03d1)
+
+### Create Reservation Form
+
+<br/>
+
+### Finish Table Confirm   
+
+<br/>
+
+### Mobile View 
+
+
