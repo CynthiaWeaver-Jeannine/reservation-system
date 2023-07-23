@@ -1,6 +1,15 @@
-/** @format */
+/** @format 
+ * 
+ * Path: front-end\src\tables\TableForm.js
+*/
 
 import React from "react";
+
+/**
+ * Defines the table form.
+ * @param submitHandler
+ * the function to call when the form is submitted
+ */
 
 const TableForm = ({
 	submitHandler,
@@ -10,7 +19,7 @@ const TableForm = ({
 }) => {
 	return (
 		<form onSubmit={submitHandler}>
-			<h2 className="mb-3 pt-3">Create new table</h2>
+			<h2 className="mb-3 pt-3">Create New Table</h2>
 			<div className="mb-3">
 				<label
 					className="form-label"
