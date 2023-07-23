@@ -30,6 +30,7 @@
 <br/>
 
 ### Search By Mobile Number Form
+![image](https://github.com/CynthiaWeaver-Jeannine/reservation-system/assets/132491873/08199404-c77d-4eaa-b6a3-c50d9f09947d)
 
 <br/>
 
@@ -41,14 +42,13 @@
 
 
 ### Create Reservation Form
+![image](https://github.com/CynthiaWeaver-Jeannine/reservation-system/assets/132491873/16efe9fa-33b3-494a-a832-09cad1cb707e)
 
-
-<br/>
-
-### Finish Table Confirm   
 
 <br/>
 
 ### Mobile View 
+![image](https://github.com/CynthiaWeaver-Jeannine/reservation-system/assets/132491873/3aaad7bf-533f-4013-8866-95ebb6897c31)
+
 
 
