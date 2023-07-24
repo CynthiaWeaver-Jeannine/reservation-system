@@ -1,37 +1,21 @@
-/** @format
- * 
- * Path: front-end\src\reservations\ReservationEdit.js
- */
+/** @format */
 
 import React, { useState, useEffect } from "react";
-import { useHistory, useParams } from "react-router";
-
-//import utility functions
-
+import { useHistory, useParams } from "react-router-dom";
 import { readReservation, updateReservation } from "../utils/api";
 import { formatAsDate } from "../utils/date-time";
-
-//import components
-
 import ReservationForm from "./ReservationForm";
 import ErrorAlert from "../layout/ErrorAlert";
 
-/**
- * Defines the reservation edit page.
- * @returns {JSX.Element}
- */
 const ReservationEdit = () => {
 	const history = useHistory();
-
 	const { reservation_id } = useParams();
 
-	const [reservation, setReservation] = useState({});
+	const [reservation, setReservation] = useState(null);
+	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 
-	//load reservation
 	useEffect(() => {
-		setReservation({});
-
 		const abortController = new AbortController();
 
 		async function loadReservation() {
@@ -41,9 +25,11 @@ const ReservationEdit = () => {
 					abortController.signal,
 				);
 				setReservation(loadedReservation);
+				setLoading(false);
 			} catch (error) {
 				if (error.name !== "AbortError") {
 					setError(error);
+					setLoading(false);
 				}
 			}
 		}
@@ -51,21 +37,28 @@ const ReservationEdit = () => {
 		return () => abortController.abort();
 	}, [reservation_id]);
 
-	const changeHandler = ({ target }) => {
-		if (target.name === "mobile_number") {
-			// Remove any non-digit characters from the input value
-			target.value = target.value.replace(/\D/g, "");
-		}
+	const changeHandler = (event) => {
+		const { name, value } = event.target;
 		setReservation({
 			...reservation,
-			[target.name]: target.value,
+			[name]: value,
 		});
+	};
+
+	const validateReservation = () => {
+		// Add any validation logic here, e.g., check if "people" is a valid number
+		// Return true if the reservation is valid, false otherwise
+		return true;
 	};
 
 	const submitHandler = async (event) => {
 		event.preventDefault();
-
 		setError(null);
+
+		if (!validateReservation()) {
+			setError({ message: "Invalid reservation. Please check your input." });
+			return;
+		}
 
 		const abortController = new AbortController();
 		reservation.people = Number(reservation.people);
@@ -90,7 +83,11 @@ const ReservationEdit = () => {
 		history.goBack();
 	};
 
-	if (reservation.reservation_id) {
+	if (loading) {
+		return "Loading...";
+	}
+
+	if (reservation) {
 		return (
 			<div>
 				<h2>Edit reservation {reservation.reservation_id}</h2>
@@ -104,7 +101,8 @@ const ReservationEdit = () => {
 			</div>
 		);
 	}
-	return "Loading...";
+
+	return "Reservation not found.";
 };
 
 export default ReservationEdit;
