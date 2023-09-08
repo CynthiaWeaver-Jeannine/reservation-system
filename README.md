@@ -70,11 +70,16 @@ To get a local copy up and running follow these simple example steps.
 ### Installation
 1.  Clone the repo
    ```sh
-  git clone https://github.com/github_cynthi](https://github.com/CynthiaWeaver-Jeannine/flashcard-o-matic.git
+  git clone https://github.com/CynthiaWeaver-Jeannine/reservation-system.git
    ```
-3. Install NPM packages
+2. Install NPM packages
    ```sh
    npm install
    ```
 
+## Contact
+
+Cynthia Weaver [LinkedIn](linkedin.com/in/cynthiajweaver-dev)
+
+Project Link: [Github Repo](https://github.com/CynthiaWeaver-Jeannine/reservation-system)
 
