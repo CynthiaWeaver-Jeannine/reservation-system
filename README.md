@@ -3,6 +3,8 @@
 # Restaurant Reservations System # 
 ### FullStack Web Application ###  
 
+### View a Demo: _[Restaurant Reservations System](https://restaurant-reservations-system.onrender.com)_
+
 ### Built With
 > [React](https://react.dev/), [Node.js](https://nodejs.org/en), [PostgreSQL](https://www.postgresql.org/), [Knex](https://knexjs.org/)
 
@@ -26,7 +28,7 @@
 > Search for a reservation by phone number (partial or complete).                                                                                                         
 <br/>
 
-### Click here for to visit the deployed site: _[Restaurant Reservations System](https://restaurant-reservations-system.onrender.com)_
+
 <br/>
 
 ### Dashboard
