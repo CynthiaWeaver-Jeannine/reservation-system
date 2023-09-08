@@ -1,8 +1,13 @@
+![image](https://github.com/CynthiaWeaver-Jeannine/reservation-system/assets/132491873/d941b691-9b06-4756-a112-ae5c1b9c9c30)
+
 # Restaurant Reservations System # 
 ### FullStack Web Application ###  
-> React.js, Node.js, PostgreSQL,  Knex
 
-### Scenario  
+### Built With
+> [React](https://react.dev/), [Node.js](https://nodejs.org/en), [PostgreSQL](https://www.postgresql.org/), [Knex](https://knexjs.org/)
+
+
+### Scenario
 > The application is created for a new start-up restaurant, "Periodic Tables".
 > The task is to create a reservation system appropriate for fine dining restaurants.
 > The software users will be restaurant personnel.
@@ -50,5 +55,26 @@
 ### Mobile View 
 ![image](https://github.com/CynthiaWeaver-Jeannine/reservation-system/assets/132491873/3aaad7bf-533f-4013-8866-95ebb6897c31)
 
+
+
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+1.  Clone the repo
+   ```sh
+  git clone https://github.com/github_cynthi](https://github.com/CynthiaWeaver-Jeannine/flashcard-o-matic.git
+   ```
+3. Install NPM packages
+   ```sh
+   npm install
+   ```
 
 
