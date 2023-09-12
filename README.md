@@ -1,8 +1,15 @@
+![image](https://github.com/CynthiaWeaver-Jeannine/reservation-system/assets/132491873/d941b691-9b06-4756-a112-ae5c1b9c9c30)
+
 # Restaurant Reservations System # 
 ### FullStack Web Application ###  
-> React.js, Node.js, PostgreSQL,  Knex
 
-### Scenario  
+### View a Demo: _[Restaurant Reservations System](https://restaurant-reservations-system.onrender.com)_
+
+### Built With
+> [React](https://react.dev/), [Node.js](https://nodejs.org/en), [PostgreSQL](https://www.postgresql.org/), [Knex](https://knexjs.org/)
+
+
+### Scenario
 > The application is created for a new start-up restaurant, "Periodic Tables".
 > The task is to create a reservation system appropriate for fine dining restaurants.
 > The software users will be restaurant personnel.
@@ -21,7 +28,7 @@
 > Search for a reservation by phone number (partial or complete).                                                                                                         
 <br/>
 
-### Click here for to visit the deployed site: _[Restaurant Reservations System](https://restaurant-reservations-system.onrender.com)_
+
 <br/>
 
 ### Dashboard
@@ -51,4 +58,30 @@
 ![image](https://github.com/CynthiaWeaver-Jeannine/reservation-system/assets/132491873/3aaad7bf-533f-4013-8866-95ebb6897c31)
 
 
+
+## Getting Started
+
+To get a local copy up and running, start with these steps.
+
+### Prerequisites
+* npm
+  ```sh
+  npm install npm@latest -g
+  ```
+
+### Installation
+1.  Clone the repo
+   ```sh
+  git clone https://github.com/CynthiaWeaver-Jeannine/reservation-system.git
+   ```
+2. Install NPM packages
+   ```sh
+   npm install
+   ```
+
+## Contact
+
+Cynthia Weaver [LinkedIn](linkedin.com/in/cynthiajweaver-dev)
+
+Project Link: [Github Repo](https://github.com/CynthiaWeaver-Jeannine/reservation-system)
 
